@@ -15,6 +15,7 @@ Plug 'preservim/vim-indent-guides'
 
 " theme
 Plug 'franbach/miramare'
+Plug 'bitfield/vim-gitgo'
 
 " lsp
 Plug 'prabirshrestha/vim-lsp'
