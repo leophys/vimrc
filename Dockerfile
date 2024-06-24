@@ -13,9 +13,11 @@ RUN groupadd -g ${GID} vim \
     ripgrep \
     curl \
     openssl \
+    nodejs \
     python \
     rustup \
     go \
+    clang \
     lua
 
 USER vim
