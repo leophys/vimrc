@@ -26,3 +26,13 @@ dbg:
 		-e DEBUG=1 \
 		--entrypoint /usr/bin/zsh \
 		-ti $(IMAGE):$(TAG) \
+
+.PHONY: install
+install:
+	ln -s $$PWD ~/.vim
+	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+PlugInstall +qall"
+	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer gopls +qall"
+	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer rust-analyzer +qall"
+	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer ruff-lsp +qall"
+	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer typescript-language-server +qall"
+	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer clangd +qall"
