@@ -16,4 +16,13 @@ dev:
 		-v $$PWD:/home/vim/.vim \
 		-v $$EXTRA:$$EXTRA \
 		-ti $(IMAGE):$(TAG) \
-		${FILE}
+		${TARGET}
+
+.PHONY: dbg
+dbg:
+	$(DOCKER) run --rm \
+		-v $$PWD:/home/vim/.vim \
+		-v $$EXTRA:$$EXTRA \
+		-e DEBUG=1 \
+		--entrypoint /usr/bin/zsh \
+		-ti $(IMAGE):$(TAG) \

@@ -9,10 +9,18 @@ RUN groupadd -g ${GID} vim \
     vim \
     git \
     zsh \
+    bat \
+    ripgrep \
     curl \
-    python
+    openssl \
+    python \
+    rustup \
+    go \
+    lua
 
 USER vim
+
+RUN rustup default stable
 
 ENTRYPOINT ["/usr/bin/vim"]
 CMD []
