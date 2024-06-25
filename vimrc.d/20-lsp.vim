@@ -1,5 +1,13 @@
 let g:lsp_settings_servers_dir = $VIMHOME . "/.lsp"
-let g:lsp_diagnostics_float_cursor = 1
+let g:lsp_diagnostics_float_cursor = 0
+let g:lsp_diagnostic_echo_cursor = 1
+let g:lsp_diagnostics_signs_error = {'text': '=>'}
+let g:lsp_diagnostics_signs_warning = {'text': '~>'}
+let g:lsp_diagnostics_signs_information = {'text': '->'}
+let g:lsp_diagnostics_signs_hint = {'text': '!'}
+let g:lsp_document_code_action_signs_hint = {'text': '!!'}
+let g:lsp_diagnostics_virtual_text_enabled = 1
+let g:lsp_inlay_hints_enabled = 0
 
 " Folding
 set foldmethod=expr
