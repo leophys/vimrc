@@ -1,13 +1,10 @@
 let $VIMHOME = expand('~/.vim')
-let s:sep = has('win32') ? '\' : '/'
+let s:user_dir = $VIMHOME
 " check if in tty
 let g:is_tty = system('case $(tty) in (/dev/tty[0-9]) echo 1;; (*) echo 0;; esac')
-
-" set user_dir
-if has('nvim')
-  let s:user_dir = stdpath('config')
-else
-  let s:user_dir = has('win32') ? expand('~/vimfiles') : expand('~/.vim')
+" set for kitty terminal usage
+if $TERM == "xterm-kitty"
+    set term=kitty
 endif
 
 """ Set python3 path
