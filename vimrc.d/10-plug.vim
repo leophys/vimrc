@@ -7,6 +7,7 @@ Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-fugitive'
+Plug 'haya14busa/vim-poweryank'
 
 " cosmetic
 Plug 'junegunn/goyo.vim'
