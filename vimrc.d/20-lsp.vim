@@ -8,11 +8,17 @@ let g:lsp_diagnostics_signs_hint = {'text': '!'}
 let g:lsp_document_code_action_signs_hint = {'text': '!!'}
 let g:lsp_diagnostics_virtual_text_enabled = 1
 let g:lsp_inlay_hints_enabled = 0
+let g:lsp_fold_enabled = 0
 
 " Folding
-set foldmethod=expr
-  \ foldexpr=lsp#ui#vim#folding#foldexpr()
-  \ foldtext=lsp#ui#vim#folding#foldtext()
+function! LspFolding()
+    let g:lsp_fold_enabled = 1
+    autocmd!
+    autocmd setlocal
+      \ foldmethod=expr
+      \ foldexpr=lsp#ui#vim#folding#foldexpr()
+      \ foldtext=lsp#ui#vim#folding#foldtext()
+endfunction
 
 " keybindings
 function! s:on_lsp_buffer_enabled() abort
@@ -33,6 +39,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> K <plug>(lsp-hover)
     nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
     nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
+    nnoremap <buffer> <leader>gf :call LspFolding()<CR>
 
     let g:lsp_format_sync_timeout = 1000
     autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
