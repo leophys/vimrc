@@ -8,6 +8,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-fugitive'
 Plug 'haya14busa/vim-poweryank'
+Plug 'yssl/QFEnter'
 
 " cosmetic
 Plug 'junegunn/goyo.vim'
