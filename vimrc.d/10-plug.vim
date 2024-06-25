@@ -6,6 +6,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-rooter'
+Plug 'tpope/vim-fugitive'
 
 " cosmetic
 Plug 'junegunn/goyo.vim'
