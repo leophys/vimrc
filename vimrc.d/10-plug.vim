@@ -28,5 +28,6 @@ Plug 'rhysd/vim-healthcheck'
 
 " languages
 Plug 'rust-lang/rust.vim'
+Plug 'charlespascoe/vim-go-syntax'
 
 call plug#end()
