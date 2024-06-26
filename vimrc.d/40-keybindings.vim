@@ -20,10 +20,9 @@ nnoremap <leader>gh :exe "Git log -L:" . expand("<cword>") . ":" . expand("%")<c
 """ FZF related
 nnoremap <C-p> :FZF<CR>
 nnoremap <leader>f :Buffers<CR>
-nnoremap <C-F> :Files<CR>
+nnoremap <C-f> :Files<CR>
 nnoremap <C-g> :Rg<CR>
 nnoremap <leader>k :exe "Rg  " . expand("<cword>")<cr>
-nnoremap <leader>s :call Fzf_dev()<CR>
 
 " cosmetic
 nnoremap <leader><esc> :silent! nohls<CR>:call clearmatches()<CR>
