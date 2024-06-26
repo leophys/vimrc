@@ -13,11 +13,16 @@ let g:miramare_enable_italic = 0
 let g:miramare_disable_italic_comment = 1
 let g:miramare_transparent_background = 0
 colorscheme miramare
-"let g:airline_theme='hybrid'
 let g:enable_bold_font = 1
 let g:enable_italic_font = 1
 set laststatus=2
 let g:colorscheme = 'miramare'
+
+" airline config
+let g:airline_theme = 'miramare'
+"let g:airline_theme='hybrid'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Set search color to green with light theme
 function! s:colorscheme_gitgo()
