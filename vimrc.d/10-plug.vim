@@ -9,6 +9,7 @@ Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-fugitive'
 Plug 'haya14busa/vim-poweryank'
 Plug 'yssl/QFEnter'
+Plug 'girishji/vimcomplete'
 
 " cosmetic
 Plug 'junegunn/goyo.vim'
