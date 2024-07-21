@@ -2,6 +2,7 @@ DOCKER ?= docker
 ORG ?= leophys
 IMAGE ?= $(ORG)/vim
 TAG ?= dev
+VIMHOMEDIR ?= ~/.vim
 
 .PHONY: build
 build:
@@ -28,8 +29,7 @@ dbg:
 		-ti $(IMAGE):$(TAG) \
 
 .PHONY: install
-install:
-	ln -s $$PWD ~/.vim
+install: $(VIMHOMEDIR)
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+PlugInstall +qall"
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer gopls +qall"
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer rust-analyzer +qall"
@@ -45,3 +45,6 @@ install:
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer vscode-css-language-server +qall"
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer vscode-html-language-server +qall"
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer yaml-language-server +qall"
+
+$(VIMHOMEDIR):
+	ln -s $$PWD ~/.vim
