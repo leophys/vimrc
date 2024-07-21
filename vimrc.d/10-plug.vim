@@ -33,5 +33,6 @@ Plug 'github/copilot.vim'
 Plug 'charlespascoe/vim-go-syntax'
 Plug 'jvirtanen/vim-hcl'
 Plug 'psf/black'
+Plug 'google/vim-jsonnet'
 
 call plug#end()
