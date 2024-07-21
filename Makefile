@@ -37,3 +37,4 @@ install:
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer typescript-language-server +qall"
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer clangd +qall"
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer bufls +qall"
+	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer pylsp +qall"

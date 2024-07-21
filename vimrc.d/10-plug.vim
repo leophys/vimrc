@@ -31,5 +31,6 @@ Plug 'rhysd/vim-healthcheck'
 Plug 'rust-lang/rust.vim'
 Plug 'github/copilot.vim'
 Plug 'charlespascoe/vim-go-syntax'
+Plug 'psf/black'
 
 call plug#end()
