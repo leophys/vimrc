@@ -45,6 +45,7 @@ install: $(VIMHOMEDIR)
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer vscode-css-language-server +qall"
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer vscode-html-language-server +qall"
 	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer yaml-language-server +qall"
+	$(MAKE) dev EXTRA=$$HOME/.vim TARGET="+LspInstallServer helm-ls +qall"
 
 $(VIMHOMEDIR):
 	ln -s $$PWD ~/.vim
