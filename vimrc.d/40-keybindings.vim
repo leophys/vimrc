@@ -34,6 +34,8 @@ xnoremap <Leader>G :Goyo<CR>
 """ Theme-related
 nnoremap <Leader>L :call LightOrDarkness()<CR>
 nnoremap <Leader>T :call ToggleTransparentBg()<CR>
+""" IndentLines
+nnoremap <Leader>i :IndentGuidesToggle<CR>
 
 " Move lines
 nnoremap <silent> <C-Down> :m .+1<CR>==
